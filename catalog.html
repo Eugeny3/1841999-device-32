@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Каталог</title>
+  </head>
+
+  <body>
+    <header>
+       <img src="" alt="Логотип сайта">
+     <nav>
+       <ul>
+          <li>
+            <a href="#">Войти</a>
+          </li>
+          <li>
+            <a href="#">Сравнить</a>
+          </li>
+          <li>
+            <a href="#">Корзина</a>
+          </li>
+       </ul>
+
+       <ul>
+          <li>
+            <a href="catalog.html">Каталог Товаров</a>
+          </li>
+          <li>
+            <a href="delivery.html">Доставка</a>
+          </li>
+          <li>
+            <a href="garanty.html">Гарантия</a>
+          </li>
+          <li>
+            <a href="contakts.html">Контакты</a>
+          </li>
+        </ul>
+     </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Моноподы для селфи</h1>
+            <ul>
+                <li>
+                    <a href="index.html">Главная</a>
+                </li>
+                <li>
+                    <a>Каталог товаров</a>
+                </li>
+            </ul>    
+        </section>
+
+        <section>
+            <h2>Список товаров с фильтрами</h2>
+            <form action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset>
+                    <legend>Стоимость</legend>
+                     <button type="button">
+                        <span>Изменить минимальную цену</span>
+                     </button>
+                    <button type="button">
+                        <span>Изменить максимальную цену</span>
+                    </button>
+                    
+                   <label>от
+                    <input type="number" name="min-price">
+                   </label>
+
+                   <label>до
+                    <input type="number" name="min-price">
+                   </label>
+                   
+                </fieldset>
+
+                <fieldset>
+                    <legend>Цвет</legend>
+                <ul>
+                 <li>
+                  <label>
+                    <input type="checkbox" name="black" checked>
+                    <span>Черный</span>
+                  </label> 
+                 </li>
+                 <li> 
+                  <label>
+                    <input type="checkbox" name="white" checked>
+                    <span>Белый</span>
+                  </label>
+                 </li>
+                 <li>
+                  <label>
+                    <input type="checkbox" name="blue">
+                    <span>Синий</span>
+                  </label>
+                 </li>
+                 <li>
+                  <label>
+                    <input type="checkbox" name="red">
+                    <span>Красный</span>
+                  </label>
+                 </li>
+                 <li>
+                  <label>
+                    <input type="checkbox" name="pink">
+                    <span>Розовый</span>
+                  </label>
+                 </li>
+                </ul>  
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Bluetooth</legend>
+                    <ul>
+                     <li>
+                      <label>
+                        <input type="radio" name="yes" checked>
+                        <span>Красный</span>
+                      </label>
+                     </li>
+                     <li>
+                      <label>
+                        <input type="radio" name="no">
+                        <span>Розовый</span>
+                      </label>
+                     </li> 
+                     </ul>
+                </fieldset>
+                <button type="submit">Показать</button>
+            </form>
+        </section>
+
+        <section>
+            <form>
+                <label for="sorting">Сортировка</label>
+                <select id="sorting" name="sorting">
+                    <option value="popular">Сначала популярное</option>
+                    <option value="cheap">Сначала дешевле</option>
+                    <option value="expensive">Сначала дороже</option>
+                </select>
+            </form>
+
+            <ul>
+                <li>
+                 <a href="product.html">
+                    <img src="" alt="Любительская селфи палка">
+                    <h3>Любительская селфи-палка</h3>
+                 </a>
+                    <p>500 ₽</p>
+                </li>
+                <li>
+                 <a href="product.html">
+                    <img src="" alt="Профессиональная селфи-палка">
+                    <h3>Профессиональная селфи-палка</h3>
+                 </a>
+                    <p>1500 ₽</p>
+                </li>
+                <li>
+                 <a href="product.html">
+                    <img src="" alt="Непотопляемая селфи-палка">
+                    <h3>Непотопляемая селфи-палка</h3>
+                 </a>
+                    <p>2500 ₽</p>
+                </li>
+                <li>
+                 <a href="product.html">
+                    <img src="" alt="Селфи-палка Следуй за мной">
+                    <h3>Селфи-палка «Следуй за мной»</h3>
+                 </a>
+                    <p>4900 ₽</p>
+                </li>
+            </ul>
+            <button type="button">Загурзить еще</button>
+        </section>
+
+        <section>
+            <ul>
+                <li>
+                    <a>
+                        <span>Назад</span>
+                    </a>
+                </li>
+                <li>
+                    <a>1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a>...</a>
+                </li>
+                <li>
+                    <a href="#">16</a>
+                </li>
+                <li>
+                    <a>
+                        <span>Вперед</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+          <h2>Контакты</h2>
+           <img src="" alt="Логотип сайта">
+            <address>
+             <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+             <a href="tel:+7 (812) 812-12-12">+7 (812) 812-12-12</a>
+            </address>
+            <ul>
+              <li>
+               <a href="delivery.html">Доставка</a>
+              </li>
+              <li>
+               <a href="garanty.html">Гарантия</a>
+              </li> 
+              <li>
+               <a href="contacts.html">Контакты</a>
+             </li>
+            </ul>
+            <ul>
+              <li>
+               <a class="button" href="#">
+                 <span class="visually-hidden">Фейсбук</span>
+               </a>
+              </li>
+              <li>
+               <a class="button" href="#">
+                 <span class="visually-hidden">Инстаграм</span>
+               </a>
+              </li>
+              <li>
+               <a class="button" href="#">
+                 <span class="visually-hidden">Твиттер</span>
+               </a>
+              </li>
+             </ul>
+               <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a>
+        </section>
+      </footer>
