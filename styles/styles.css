@@ -46,16 +46,26 @@ body {
     background-color: #FFFFFF;
 }
 
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
 
 /* Шапка сайта*/
 .page-header {  
     color: #000000;
 }
 
-.page-header-container {
+.header-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.navigation-container {
     width: 1160px;
     background-color: #FFE17F;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .user-navigation-list {
@@ -79,11 +89,6 @@ body {
     width: 1040px;
 }
 
-.navigation {
-    width: 1160px;
-    margin: 0 auto;
-}
-
 .navigation-link {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -95,8 +100,8 @@ body {
 }
 
 .user-navigation-list {
-    margin: 0;
-    padding: 0;
+    width: 1075px;
+    display: flex;
 }
 
 
@@ -109,12 +114,14 @@ body {
 
 .slider-container-text {
     display: block;
+    justify-content: start;
     width: 560px;
 }
 
 .slider-image {
     width: 560px;
     height: 560px;
+
 }
 
 .slider-slogan {
@@ -151,14 +158,19 @@ body {
 
 
 /* Категория товаров */
-.categories-container {
-    width: 1160px;
-    margin: 0 auto;
+.image-container {
+    width: 160px;
+    height: 160px;
+    background-color: #FFE17F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
 }
 
 .categories-list {
     display: flex;
-    width: 1160px;
+    justify-content: space-between;
 }
 
 .categories-link {
@@ -167,31 +179,35 @@ body {
     line-height: 24px;
     text-decoration: none;
     color: #000000;
+    display: flex;
+    width: 160px;
+    margin: 0 auto;
 }
 
-.categories-item {
-    background-color: #FFE17F;
-}
 
 /* Список преимуществ */
-.advantages-container {
-    width: 1440px;
-    margin: 0 auto;
+.advantages {
+    background-color: #F0F0F0;
 }
 
 .advantages-title {
     font-family: "Raleway", sans-serif;
     font-size: 50px;
     line-height: 50px;
+    width: 560px;
 }
 
+.advantages-text {
+    width: 500px;
+}
 
-/* Кнопка доставки над секцией контактов */
-.delivery-button-container {
-    width: 1160px;
+.advantages-list-container {
+    display: flex;
+    justify-content: flex-end;
     margin: 0 auto;
 }
 
+/* Кнопка доставки над секцией контактов */
 .delivery-link {
     font-family: "Raleway", sans-serif;
     font-size: 20px;
@@ -206,14 +222,12 @@ body {
 
 /* Контакты */
 .contacts-container {
-    width: 1440px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .contacts-container-text {
-    width: 560px;
+    display: block;
 }
 
 .contacts-title {
@@ -273,8 +287,10 @@ body {
 /* Подписка на рассылку */
 .subscription {
     background-color: #F0F0F0;
-    width: 1440px;
-    margin: 0 auto;
+}
+
+.subscription-container {
+    display: flex;
 }
 
 .subscription-title {
@@ -289,9 +305,6 @@ body {
     width: 560px;
 }
 
-.subscription-container {
-    display: flex;
-}
 
 /* Подвал */
 .page-footer {
@@ -316,11 +329,9 @@ body {
 }
 
 .footer-container {
-    width: 1440px;
-    margin: 0 auto;
-}
+    display: flex;
+    justify-content: space-between;
 
-/* Стили для каталога */
 .footer-link {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -331,6 +342,7 @@ body {
     color: #FFFFFF;
 }
 
+/* Стили для каталога */
 .inner-header-title {
     font-family: "Raleway", sans-serif;
     font-size: 50px;
@@ -341,8 +353,13 @@ body {
     color: #000000;
 }
 
+
 .breadcrumbs-link {
     color: inherit;
+}
+
+.catalog-products {
+    display: flex;
 }
 
 .catalog-products-subtitle {
