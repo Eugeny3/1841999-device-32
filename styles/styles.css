@@ -360,7 +360,6 @@ body {
     color: #000000;
 }
 
-
 .breadcrumbs-link {
     color: inherit;
 }
@@ -378,8 +377,18 @@ body {
     background-color: #DCDCDC;
 }
 
-.sorting-container {
+.filter-container {
+    width: 470px;
     background-color: #EBEBEB;
+}
+
+.sorting-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 760px;
+    margin-right: 72px;
+    margin-left: 72px;
 }
 
 .catalog-filter-title {

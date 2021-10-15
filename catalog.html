@@ -66,10 +66,10 @@
         </section>
 
         <section class="catalog-products">
-            <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-
-             <h3 class="catalog-products-subtitle">Фильтр:</h3>
-              <div class="sorting-container">
+          <!-- Временно скроем заголовки -->
+          <div class="filter-container">
+             <h2 class="visually-hidden" hidden>Список товаров с фильтрами</h2>
+              <h3 class="catalog-products-subtitle">Фильтр:</h3>
                <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Стоимость</legend>
@@ -131,19 +131,22 @@
                      <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="yes" checked>
-                        <span class="control-label">Красный</span>
+                        <span class="control-label">Есть</span>
                       </label>
                      </li>
                      <li class="catalog-filter-item">
                       <label class="control">
                         <input class="visually-hidden control-input" type="radio" name="no">
-                        <span class="control-label">Розовый</span>
+                        <span class="control-label">Нет</span>
                       </label>
                      </li> 
                      </ul>
-                  </fieldset>
-                 <button class="button-filter" type="submit">Показать</button>
-               </form>
+                </fieldset>
+              <button class="button-filter" type="submit">Показать</button>
+          </form>
+       </div>
+
+          <div class="sorting-container">
                <form class="sorting-type">
                 <label class="visually-hidden" for="sorting">Сортировка</label>
                 <select class="selection-control" id="sorting" name="sorting">
@@ -152,9 +155,9 @@
                     <option value="expensive">Сначала дороже</option>
                 </select>
                </form>
-              </div>
-
-            <h2 class="visually-hidden">Карточка товаров</h2>
+              
+          <!-- Временно скроем заголовки -->
+            <h2 class="visually-hidden" hidden>Карточка товаров</h2>
 
             <ul class="product-list">
                 <li class="product-card">
@@ -187,6 +190,7 @@
                 </li>
             </ul>
             <button class="button" type="button">Загрузить еще</button>
+          </div>
         </section>
 
         <section class="pagination">
@@ -219,7 +223,7 @@
                 </li>
             </ul>
         </section>
-        </div>
+      </div>
     </main>
 
    <!-- Подвал -->
@@ -228,7 +232,9 @@
      <section class="footer-contacts">
        <div class="footer-container">
        <h2 class="visually-hidden">Контакты</h2>
+       <a class="navigation-footer-logo" href="index.html">
         <img class="footer-contacts-logo" src="images/logo-footer.svg" alt="Логотип сайта" width="145" height="36">
+       </a>
          <address class="footer-contacts-adress">
           <p class="about-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="footer-contacts-phone" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
