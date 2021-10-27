@@ -67,18 +67,23 @@
       </section>
 
       <section class="catalog-products">
-          <div class="filter-container">
-             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
-              <h3 class="catalog-products-subtitle">Фильтр:</h3>
-               <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-                <fieldset class="catalog-filter-group">
-                    <legend class="catalog-filter-title">Стоимость</legend>
-                     <button class="catalog-button" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену</span>
-                     </button>
-                    <button class="catalog-button" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену</span>
-                    </button>
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
+        <!-- Фоновые цвета -->
+         <div class="gray-container"></div>
+         <div class="name-filter-container">
+           <h3 class="catalog-products-subtitle">Фильтр:</h3>
+         </div>
+         <div class="light-gray-left-container"></div>
+         <div class="filter-container">
+            <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+             <fieldset class="catalog-filter-group">
+                <legend class="catalog-filter-title">Стоимость</legend>
+                <button class="catalog-button" type="button">
+                  <span class="visually-hidden">Изменить минимальную цену</span>
+                </button>
+                <button class="catalog-button" type="button">
+                  <span class="visually-hidden">Изменить максимальную цену</span>
+                </button>
                     
                    <label class="catalog-filter-label">от
                     <input class="catalog-filter-input" type="number" name="min-price">
@@ -87,9 +92,9 @@
                    <label class="catalog-filter-label" >до
                     <input class="catalog-filter-input" type="number" name="min-price">
                    </label>
-                </fieldset>
+              </fieldset>
 
-                <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Цвет</legend>
                 <ul class="catalog-filter-list">
                  <li class="catalog-filter-item">
@@ -123,7 +128,7 @@
                   </label>
                  </li>
                 </ul>  
-                </fieldset>
+              </fieldset>
                 
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Bluetooth</legend>
@@ -143,10 +148,10 @@
                      </ul>
                 </fieldset>
               <button class="button-filter" type="submit">Показать</button>
-          </form>
-       </div>
+           </form>
+         </div>
 
-          <div class="sorting-container">
+         <div class="sorting-container">
                <form class="sorting-type">
                 <label class="sorting-type-item" for="sorting">Сортировка:</label>
                 <select class="selection-control" id="sorting" name="sorting">
@@ -200,7 +205,7 @@
 
             <h2 class="visually-hidden">Навигация</h2>
             <ul class="pagination-list">
-                <li class="pagination-left-item">
+                <li class="pagination-text-item pagination-left-item">
                     <a class="pagination-link" href="#">
                         <span class="pagination-button">Назад</span>
                     </a>
@@ -220,14 +225,15 @@
                 <li class="pagination-item-number">
                     <a class="pagination-link" href="#">15</a>
                 </li>
-                <li class="pagination-right-item">
+                <li class="pagination-text-item pagination-right-item">
                     <a class="pagination-link" href="#">
                         <span class="pagination-button">Вперед</span>
                     </a>
                 </li>
             </ul>
-          </div>
-        </section>
+         </div>
+         <div class="light-gray-right-container"></div>
+      </section>
     </main>
 
   <!-- Подвал -->
