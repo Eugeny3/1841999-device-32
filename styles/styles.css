@@ -310,21 +310,22 @@ body {
     height: 388px;
 }
 
-.advantages-background-container {
-    margin: 0;
-    padding: 0;
-    height: 288px;
+.advantages-container::before {
+    content: "";
+    position: absolute;
     background-color: #f0f0f0;
+    width: 100%;
+    height: 288px;
+    z-index: -1;
 }
 
 .advanvantages-content-container {
     display: flex;
-    align-items: center;
     width: 1095px;
     height: 250px;
     margin: 0;
-    margin-top: -15px;
-    margin-left: 400px;
+    margin-bottom: 70px;
+    margin-left: 120px;
     padding: 0;
 }
 
@@ -341,17 +342,17 @@ body {
     width: 560px;
     height: 70px;
     margin: 0;
+    margin-bottom: 14px;
     padding: 0;
 }
 
 .advantages-text {
     width: 500px;
     height: 165px;
+    margin: 0;
+    padding: 0;
 }
 
-.advantages-image {
-    margin-bottom: 85px;
-}
 
 /* Кнопка доставки над секцией контактов */
 .delivery-button {
@@ -718,33 +719,29 @@ body {
 /* Секция фильтр */
 .catalog-products {
     display: grid;
-    grid-template-columns: auto 328px 832px auto;
+    justify-content: center;
+    grid-template-columns: 328px 832px;
     grid-template-rows: 70px auto;
     grid-template-areas:
-       "gray         name-filter-container     sorting-container light-gray-2"
-       "light-gray   filter-container          sorting-container .";
-}
-
-/* Фоновыe цвета */
-.gray-container {
-    grid-area: gray;
-    background-color: #dcdcdc;
-}
-
-.light-gray-left-container {
-    grid-area: light-gray;
-    background-color: #ebebeb;
-}
-
-.light-gray-right-container {
-    grid-area: light-gray-2;
-    background-color: #ebebeb;
+       "name-filter-container sorting-container"
+       "filter-container      sorting-container";
 }
 
 .name-filter-container {
+    position: relative;
     grid-area: name-filter-container;
     background-color: #dcdcdc;
     padding-left: 60px;
+}
+
+.name-filter-container::before {
+    content: "";
+    position: absolute;
+    background-color: #dcdcdc;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    z-index: -1;
 }
 
 .catalog-products-subtitle {
@@ -760,6 +757,7 @@ body {
 }
 
 .filter-container {
+    position: relative;
     grid-area: filter-container;
     background-color: #ebebeb;
     padding-left: 60px;
@@ -769,6 +767,16 @@ body {
 
 .catalog-filter {
     margin-right: 70px;
+}
+
+.filter-container::before {
+    content: "";
+    position: absolute;
+    background-color: #ebebeb;
+    width: 100vw;
+    height: 100%;
+    right: 0;
+    z-index: -1;
 }
 
 .catalog-filter-title {
@@ -825,6 +833,7 @@ body {
 }
 
 .sorting-type {
+    position: relative;
     font-family: "Raleway", sans-serif;
     font-size: 16px;
     line-height: 19px;
@@ -835,6 +844,16 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 70px;
+}
+
+.sorting-type::before {
+    content: "";
+    position: absolute;
+    background-color: #ebebeb;
+    width: 100vw;
+    height: 100%;
+    left: 0;
+    z-index: -1;
 }
 
 .sorting-type-item {
