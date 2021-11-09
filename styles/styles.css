@@ -584,7 +584,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 240px;
-    margin-top: 19px;
+    margin-top: 9px;
 }
 
 .advantages-button-container::before {
@@ -599,6 +599,7 @@ body {
 
 }
 
+/* Кнопки списка преимуществ */
 .advantages-button {
     position: relative;
     font-family: "Raleway";
@@ -609,18 +610,12 @@ body {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     width: 160px;
-    height: 20px;
-    margin-bottom: 45px;
+    height: 40px;
+    margin-bottom: 25px;
     border: none;
     cursor: pointer;
     background: transparent;
     z-index: 1;
-}
-
-.advantages-button:hover {
-    position: relative;
-    background-color: #ffc700;
-    height: 40px;
 }
 
 .advantages-button::before {
@@ -629,9 +624,15 @@ body {
     background-color: #ffc700;
     width: 160px;
     height: 8px;
-    top: 8px;
+    top: 16px;
     left: 0;
     z-index: -1;
+}
+
+.advantages-button:hover {
+    background-color: #ffc700;
+    height: 40px;
+    z-index: 1;
 }
 
 .advantages-button.advantages-button-current {
@@ -650,6 +651,7 @@ body {
     height: 40px;
     left: 160px;
     top: 0;
+    z-index: 1;
 }
 
 .advantages-list {
@@ -658,6 +660,7 @@ body {
     padding: 0;
 }
 
+/* Переключение списка преимуществ */
 .advantages-item-1 {
     position: relative;
 }
