@@ -43,7 +43,8 @@
                    Сравнить</a>
                 </li>
                 <li class="user-navigation-item-basket">
-                 <a class="user-navigation-link" href="#">
+                  <a class="user-navigation-link" href="#">
+                  <span class="number-basket-item">2</span>
                   <svg class="navigation-image" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/>
                   </svg>
@@ -76,9 +77,18 @@
        <h2 class="visually-hidden">Слайдер с товарами</h2>
        <!--Настроить переключение слайдера-->
        <!-- Первый Слайд -->
-       <div class="slider-container slider-first">
-        <img class="slider-image" src="images/slider/slider-1.png" alt="Изображение квадрокоптера" width="560" height="560">
-         <div class="slider-container-text slider-1">
+       <div class="slider-container slider-1 slider-current">
+         <div class="slider-button-container">
+          <img class="slider-image" src="images/slider/slider-1.png" alt="Изображение квадрокоптера" width="560" height="560">
+          <button class="slider-button slider-next">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider-button slider-prev">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+         </div>
+
+         <div class="slider-container-text">
           <strong class="slider-slogan">Порхает как бабочка, жалит как пчела!</strong>
            <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
             <a class="slider-link" href="catalog.html/categories/quadcopters">Подробнее</a>
@@ -92,29 +102,29 @@
             <th>Радиус поражения</th>
            </tr>
           </table>
-        </div>
-        <!-- Пагинация слайдера -->
-        <ol class="slider-pagination">
-         <li class="slider-pagination-item">
-           <button class="slider-pagination-button slider-pagination-button-current" type="button">
-             <span class="visually-hidden">1 слайд</span>
-           </button>
-         </li>
-         <li class="slider-pagination-item">
-           <button class="slider-pagination-button" type="button">
-             <span class="visually-hidden">2 слайд</span>
-           </button>
-         </li>
-         <li class="slider-pagination-item">
-           <button class="slider-pagination-button" type="button">
-             <span class="visually-hidden">3 слайд</span>
-           </button>
-         </li>
-        </ol>
+         </div>
+         <!-- Пагинация слайдера -->
+         <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+              <span class="visually-hidden">1 слайд</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">2 слайд</span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">3 слайд</span>
+            </button>
+          </li>
+         </ol>
       </div>
 
         <!-- Второй Слайд -->
-       <div class="slider-container">
+       <div class="slider-container slider-2">
          <img class="slider-image" src="images/slider/slider-2.png" alt="Изображение фитнес-браслета" width="560" height="560">
           <div class="slider-container-text slider-2">
            <strong class="slider-slogan">Худеем правильно!</strong>
@@ -132,9 +142,9 @@
        </div>
 
         <!-- Третий Слайд   -->
-       <div class="slider-container slider-last"> 
+       <div class="slider-container slider-3">
         <img class="slider-image" src="images/slider/slider-3.png" alt="Изображение селфи-палки" width="560" height="560">
-         <div class="slider-container-text slider-3"> 
+         <div class="slider-container-text"> 
           <strong class="slider-slogan">Делай селфи, как Бен Стиллер!</strong>
            <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="slider-link" href="catalog.html/categories/monopods">Подробнее</a>
@@ -213,64 +223,47 @@
      <!-- Список преимуществ -->
      <section class="advantages">
        <!--Слева меню должно переключаться-->
-         <h2 class="visually-hidden">Наши преимущества</h2>
-         
+         <h2 class="visually-hidden">Наши преимущества</h2>   
          <div class="advantages-container">
            <div class="container">
-             <div class="advanvantages-content-container first-content-container">
-              <div class="advantages-buttons-container">
-                <a class="advantages-buttons">Доставка</a>
-                <a class="advantages-buttons">Гарантия</a>
-                <a class="advantages-buttons">Кредит</a>
+             <div class="advanvantages-content-container">
+              <div class="advantages-button-container">
+                <button class="advantages-button advantages-button-current">
+                  <span class="advantages-button-text">Доставка</span>
+                </button>
+                <button class="advantages-button ">
+                  <span class="advantages-button-text">Гарантия</span>
+                </button>
+                <button class="advantages-button">
+                  <span class="advantages-button-text">Кредит</span>
+                </button>
               </div>
              <ul class="advantages-list">
-              <li class="advantages-item">
+              <li class="advantages-item-1 advantages-current">
                <h3 class="advantages-title">Доставка</h3>
                 <p class="advantages-text">Мы с удовольствием доставим ваш товар прямо
                  к вашему подъезду совершенно бесплатно! Ведь
                  мы неплохо заработаем, поднимая его на ваш этаж.
                 </p>
               </li>
-             </ul>
-            <img class="advantages-image" src="images/advantage/delivery.svg" alt="Мы с удовольствием доставим ваш товар" width="136" height="164">
-           </div>
-          </div>
-        </div>
-
-         <div class="advantages-container">
-           <div class="container">
-            <div class="advanvantages-content-container">
-             <ul class="advantages-list">
-              <li class="advantages-item">
+              <li class="advantages-item-2">
                <h3 class="advantages-title">Гарантия</h3>
                 <p class="advantages-text">Если из-за возгорания купленного у нас товара у вас
                  сгорит дом — не переживайте, мы выдадим вам новый.
                  Товар, не дом, конечно же.
                 </p>
                </li>
-             </ul>
-            <img class="advantages-image" src="images/advantage/garanty.svg" alt="Гарантия выдадим новый товар" width="171" height="195">
-           </div>
-          </div>
-        </div>
-
-         <div class="advantages-container">
-           <div class="container">
-            <div class="advanvantages-content-container">
-             <ul class="advantages-list">
-              <li class="advantages-item">
+              <li class="advantages-item-3">
                <h3 class="advantages-title">Кредит</h3>
                 <p class="advantages-text">Залезть в долговую яму стало проще! Кредитные 
                  консультанты подберут для вас наиболее выгодные
                  условия кредита. Выгодные для банка, разумеется.
                 </p>
-               </li>
+              </li>
              </ul>
-            <img class="advantages-image" src="images/advantage/credit.svg" alt="Выгодные условия кредита" width="156" height="188">
+            </div>
           </div>
-         </div>
-      </div>
-
+        </div>
      </section>
 
      <!-- Кнопка доставки -->
@@ -329,8 +322,7 @@
              </div>
              <a class="contacts-button" href="#">Напишите нам</a>
            </div>
-
-        </div>
+         </div>
        </div>
      </section>
 
@@ -347,8 +339,8 @@
          <form class="subscription-form">
           <input class="subscription-form-email" type="email" name="your-e-mail" placeholder="Ваш e-mail">
           <button class="subscription-button" type="submit">Подписаться</button>
-          <p class="subscription-mark">Это бесплатно</p>
-         </form>
+        </form>
+        <p class="subscription-mark">Это бесплатно</p>
        </div>
      </div>
     </section>
