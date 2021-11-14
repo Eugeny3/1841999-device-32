@@ -216,15 +216,13 @@ body {
 
 .user-navigation-item-search {
     width: 516px;
-    height: 20px;
     margin-right: 24px;
 }
 
 .user-navigation-form-search {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
-    top: -10px;
 }
 
 .user-navigation-search-input {
@@ -234,7 +232,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #000000;
-    width: 304px;
+    width: 496px;
     height: 20px;
     padding: 0;
     padding-left: 36px;
@@ -262,7 +260,12 @@ body {
     border-radius: 20px;
 }
 
+/* Временно скрываем кнопку для дальнейшей реализации */
 .user-navigation-search-button {
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: 346px;
     font-family: "Rubik";
     font-weight: 400;
     font-size: 16px;
@@ -277,8 +280,20 @@ body {
     outline: none;
     border: 2px solid #000000;
     border-radius: 0px 20px 20px 0px;
-    position: relative;
+    display: none;
 }
+
+/* Если задаем класс ниже, кнопка появляется,
+а outline меняет цвет на черный */
+.search-button-open {
+    display: block;
+}
+
+/* .user-navigation-search-input {
+    outline: 2px solid #000000;
+    outline-offset: 8px;
+    border-radius: 20px;
+} */
 
 .user-navigation-search-button:focus {
     border: 2px solid #af4fff;
@@ -363,10 +378,72 @@ body {
     list-style-type: none;
 }
 
+/* Выпадающее меню */
 .navigation-item-catalog {
+    position: relative;
     width: 236px;
     height: 20px;
     margin-right: 304px;
+}
+
+.navigation-item-catalog:focus-within .navigation-submenu-list {
+    display: flex;
+}
+
+.navigation-item-catalog:hover .navigation-submenu-list {
+    display: flex;
+}
+
+.navigation-submenu-list {
+    position: absolute;
+    content: "";
+    width: 1100px;
+    height: 120px;
+    top: 38px;
+    left: -60px;
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 27px;
+    background-color: #ffe17f;
+    z-index: 1;
+    display: none;
+}
+
+.navigation-submenu-item {
+    display: flex;
+    flex-direction: column;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 50px;
+    width: 210px;
+}
+
+.navigation-submenu-link {
+    text-decoration: none;
+    color: #000000;
+    width: max-content;
+    margin-bottom: 23px;
+}
+
+.navigation-submenu-link:focus {
+    position: relative;
+    outline: 2px solid #af4fff;
+    border-radius: 25px;
+    outline-offset: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    left: -10px;
+}
+
+.navigation-submenu-link:hover {
+    outline: none;
+    opacity: 0.6;
+}
+
+.navigation-submenu-link:active {
+    opacity: 0.3;
 }
 
 .navigation-item-delivery {
@@ -2066,7 +2143,11 @@ body {
     appearance: textfield;
     margin-right: 40px;
 }
-  
+
+.range-input::selection {
+    background-color: transparent;
+}
+
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
     appearance: none;
@@ -2089,8 +2170,8 @@ body {
     padding-left: 37px;
 }
 
-  /* Mark */
-  .control-mark {
+/* Mark */
+.control-mark {
     position: absolute;
     top: 0;
     left: 0;
@@ -2101,17 +2182,49 @@ body {
     border-radius: 3px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::before,
-.control-input[type="checkbox"]:checked + .control-mark::after {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 10px;
-  height: 10px;
-  background-image: url(../images/catalog/color-mark.svg);
-  background-repeat: no-repeat;
-  content: "";
-  cursor: pointer;
+.control-input-image {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 3px;
+    cursor: pointer;
+    fill: #000000;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark svg,
+.control-input[type="checkbox"]:checked + .control-mark {
+  fill: transparent;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+.control-input:focus ~ .control-label {
+    color: #af4fff;
+}
+
+.control-input:hover ~ .control-label {
+    color: #000000;
+}
+
+.control-input:active ~ .control-label {
+    opacity: 0.2;
+}
+
+.control-input:focus ~ .control-mark,
+.control-input:focus ~ .control-mark svg {
+    fill: #af4fff;
+    border-color: #af4fff;
+}
+
+.control-input:hover ~ .control-mark,
+.control-input:hover ~ .control-mark svg {
+    fill: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+.control-input:active ~ .control-mark,
+.control-input:active ~ .control-mark svg {
+    fill: rgba(0, 0, 0, 0.2);
+    opacity: 0.2;
 }
 
 /* Radio */
@@ -2128,6 +2241,10 @@ body {
     background-color: #000000;
     border-radius: 50%;
     content: "";
+}
+
+.control-input[type="radio"]:focus + .control-mark::before {
+    background-color: #af4fff;
 }
 
 /* Кнопка фильтра */
@@ -2207,7 +2324,16 @@ body {
     gap: 40px 44px;
 }
 
+.product-card {
+    position: relative;
+    width: 360px;
+    height: 462px;
+}
+
 .product-card-link {
+    position: relative;
+    width: 360px;
+    height: 380px;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -2218,14 +2344,17 @@ body {
     display: block;
 }
 
-.product-card-link:focus {
-    height: 380px;
+.product-card-link:focus  {
     outline: 5px solid #af4fff;
     color: #af4fff;
 }
 
 .product-card-link:hover {
     opacity: 0.3;
+}
+
+.product-card-link:hover + .product-card-button {
+    display: block;
 }
 
 .product-text-container {
@@ -2251,7 +2380,56 @@ body {
     line-height: 21px;
     margin: 0;
     font-family: "Rubik", sans-serif;
+}
 
+.product-card-button {
+    display: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000000;
+    position: absolute;
+    content: "";
+    top: 180px;
+    left: 90px;
+    width: 180px;
+    height: 20px;
+    z-index: 1;
+}
+
+.product-card-button::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    background-color: #ffc700;
+    width: 180px;
+    height: 8px;
+    z-index: -1;
+}
+
+.product-card-button:hover:before {
+    height: 40px;
+    top: -12px;
+}
+
+.product-card-button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.new-mark {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    top: 27px;
+    right: 27px;
 }
 
 .product-button {
@@ -2293,6 +2471,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 760px;
     height: 70px;
     margin: 0;
     margin-left: 70px;
@@ -2312,7 +2491,6 @@ body {
     font-size: 16px;
     line-height: 19px;
     color:rgba(0, 0, 0, 0.3);
-    margin-right: 30px;
 }
 
 .pagination-link {
@@ -2321,22 +2499,24 @@ body {
     justify-content: center;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.3);
+    width: 28px;
+    height: 28px;
+    border: 5px solid transparent;
+    outline: none;
 }
 
 .pagination-link:focus {
-    position: relative;
-    outline: 5px solid #af4fff;
-    width: 28px;
-    height: 28px;
-    border: none;
+    border: 5px solid #af4fff;
 }
 
 .pagination-link:hover {
     color: rgba(0, 0, 0, 1);
+    border: 5px solid transparent;
 }
 
 .pagination-link:active {
     color: rgba(0, 0, 0, 0.1);
+    border: 5px solid transparent;
 }
 
 .pagination-button-link {
