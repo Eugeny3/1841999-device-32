@@ -332,6 +332,11 @@ body {
 }
 
 .user-navigation-link-logout {
+    font-family: "Rubik";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    opacity: 0.3;
     margin-right: 36px;
     margin-left: auto;
 }
@@ -343,14 +348,30 @@ body {
 }
 
 .user-navigation-item-basket {
+    position: relative;
     width: auto;
     height: 20px;
     margin-left: auto;
     text-align: right;
 }
 
-.number-basket-item {
-    font-family: "Rubik";
+/* .popover {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #000000;
+    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.popover-close-button {
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -361,10 +382,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    margin-right: -15px;
-    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
 }
+
+.popover-content {
+    height: 100%;
+}
+
+.popover-cart {
+    width: 320px;
+}
+
+.popover-content .product-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.popover-content .product-card {
+    display: flex;
+    width: 244px;
+    height: 42px;
+}
+
+.popover-content .product-card-link {
+    display: block;
+    width: 244px;
+    height: 42px;
+}
+
+.popover-content .product-text-container {
+    width: 180px;
+    height: 43px;
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+}
+
+.popover-content .product-card-price {
+    display: none;
+}
+
+.popover-content img {
+    width: 41px;
+    height: 43px;
+} */
 
 /* Нижнее меню */
 .navigation-list {
@@ -382,7 +451,7 @@ body {
 .navigation-item-catalog {
     position: relative;
     width: 236px;
-    height: 20px;
+    height: 50px;
     margin-right: 304px;
 }
 
@@ -399,10 +468,10 @@ body {
     content: "";
     width: 1100px;
     height: 120px;
-    top: 38px;
+    top: 50px;
     left: -60px;
     padding-left: 60px;
-    padding-top: 30px;
+    padding-top: 33px;
     padding-bottom: 27px;
     background-color: #ffe17f;
     z-index: 1;
@@ -502,12 +571,22 @@ body {
 }
 
 .navigation-catalog-link {
-    position: relative;
+    height: 35px;
+    padding-top: 15px;
+    padding-right: 17px;
+    padding-left: 20px;
+    left: -20px;
+}
+
+.navigation-catalog-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 0;
 }
 
 .navigation-catalog-link:hover {
     outline: none;
 }
+
 
 .navigation-catalog-link::before {
     content: "";
@@ -516,8 +595,8 @@ body {
     height: 50px;
     background-image: url(../images/catalog/catalog-button-plus.svg);
     background-repeat: no-repeat;
-    left: 242px;
-    top: -15px;
+    left: 262px;
+    top: 0;
 }
 
 .navigation-catalog-link:hover:before {
@@ -1338,6 +1417,21 @@ body {
     padding: 0;
 }
 
+.contacts-phone:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 5px;
+    border-radius: 25px;
+}
+
+.contacts-phone:hover {
+    color: rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+.contacts-phone:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
 .contacts-button {
     position: relative;
     font-family: "Raleway", sans-serif;
@@ -1520,10 +1614,6 @@ body {
 .page-footer {
     background-color: #444444;
     color:#ffffff;
-}
-
-.footer-logo {
-    outline: none;
 }
 
 .footer-container {
@@ -1737,17 +1827,6 @@ body {
 /* Заголовок каталога */
 .catalog-navigation-container {
     padding-bottom: 38px;
-}
-
-.catalog-navigation-container .user-navigation-link-logout {
-    font-family: "Rubik";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    opacity: 0.3;
-    top: 0;
-    right: 16px;
-    cursor: pointer;
 }
 
 .inner-header {
