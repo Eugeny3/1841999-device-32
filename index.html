@@ -12,7 +12,7 @@
     <header class="page-header">
        <h1 class="visually-hidden">Сайт "Девайс"</h1>
          <div class="header-container">
-           <a class="navigation-logo" href="index.html">
+           <a class="navigation-logo">
              <img class="logo" src="images/logo.svg" alt="Логотип сайта" width="145" height="36">
            </a>
            <div class="navigation-container">
@@ -47,36 +47,47 @@
                   <svg class="navigation-image basket-image" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/>
                   </svg>
+                  <button class="popover-close-button">
+                    2
+                    <span class="visually-hidden">Закрыть</span>
+                  </button>
                   Корзина</a>
-                  <!-- <div class="popover popover-cart">
-                    <button class="popover-close-button">
-                      2
-                      <span class="visually-hidden">Закрыть</span>
-                    </button>
+                  <div class="popover popover-cart">
                     <div class="popover-content">
                        <h2 class="popover-title visually-hidden">Корзина</h2>
-                       <ul class="product-list">
-                        <li class="product-card">
-                         <a class="product-card-link" href="#">
-                            <img class="product-card-image" src="images/catalog/product-1.jpg" alt="Любительская селфи палка" width="360" height="380">
-                            <div class="product-text-container">
-                              <h3 class="product-card-title">Любительская селфи-палка</h3>
-                              <p class="product-card-price">500 ₽</p>
-                            </div>
-                         </a>
+                       <ul class="popover-cart-list">
+                        <li class="popover-cart-item">
+                         <a class="popover-cart-link" href="#">
+                           <img class="popover-cart-image" src="images/basket-popup/product-1-small.jpg" alt="Любительская селфи палка" width="41" height="43">
+                           <div class="popover-cart-container">
+                              <p class="popover-cart-text">Любительская<br>селфи-палка</p>
+                           </div>
+                          </a>
+                          <button class="popover-cart-button-delete">
+                           <span class="visually-hidden">Удалить</span>
+                          </button>
                         </li>
-                        <li class="product-card">
-                         <a class="product-card-link" href="#">
-                            <img class="product-card-image" src="images/catalog/product-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
-                            <div class="product-text-container">
-                              <h3 class="product-card-title">Профессиональная селфи-палка</h3>
-                              <p class="product-card-price">1500 ₽</p>
-                            </div>
-                         </a>
+                        <li class="popover-cart-item">
+                         <a class="popover-cart-link" href="#">
+                           <img class="popover-cart-image" src="images/basket-popup/product-2-small.jpg" alt="Профессиональная селфи-палка" width="41" height="43">
+                           <div class="popover-cart-container">
+                              <p class="popover-cart-text">Профессиональная<br>селфи-палка</p>
+                           </div>
+                          </a>
+                          <button class="popover-cart-button-delete">
+                           <span class="visually-hidden">Удалить</span>
+                          </button>
                         </li>
                        </ul>
+                       <div class="popover-price-results-wrapper">
+                         <p class="popover-price-results-text">Товаров:&nbsp;2</p>
+                         <p class="popover-price-results-total">Сумма:&nbsp;2000 ₽</p>
+                       </div>
+                       <div class="popover-cart-button-container">
+                         <button class="open-basket-button">Открыть корзину</button>
+                       </div>
                     </div>
-                  </div> -->
+                  </div>
                 </li>
                </ul>
 
@@ -456,5 +467,48 @@
       </div>
      </section>
    </footer>
+
+   <div class="modal-container">
+     <div class="modal modal-auth">
+       <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group field-login-item">
+            <label class="modal-item" for="auth-login">Ваше имя:</label>
+            <input class="auth-form-field field-login" type="text" id="auth-login" name="auth-login" placeholder="Имя Фамилия">
+            <span class="login-bottom-text">Пожалуйста представьтесь</span>
+          </p>
+          <p class="field-group field-e-mail-item">
+            <label class="modal-item" for="auth-e-mail">Ваш e-mail:</label>
+            <input class="auth-form-field field-e-mail" type="email" id="auth-e-mail" name="auth-e-mail" placeholder="Введите e-mail">
+            <span class="login-bottom-text">Забавный у вас адрес</span>
+          </p>
+          <p class="field-group">
+            <label class="modal-item" for="auth-text">Что нужно привезти:</label>
+            <input class="auth-form-field field-text" type="text" id="auth-text" name="auth-text" placeholder="В свободной форме">
+          </p>
+          <p class="field-group field-number-item">
+            <label class="modal-item" for="auth-number">Количество:</label>
+            <input class="auth-form-field field-number" type="number" id="auth-range" name="auth-number" value="1" min="1" max="90000">
+            <button class="number-button-minus" type="button">
+              <span class="visually-hidden">Левая кнопка</span>
+            </button>
+            <button class="number-button-plus" type="button">
+              <span class="visually-hidden">Правая кнопка</span>
+            </button>
+          </p>
+          <button class="auth-form-button" type="submit">Отправить</button>
+        </form>
+        <div class="modal-info-text-container">
+          <p class="modal-info-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br> 
+            к провозу багажа.</p>
+        </div>
+      </section>
+     </div>
+   </div>
+
   </body>
 </html>
