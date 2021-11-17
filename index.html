@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="../1841999-device-32/images/favicon.svg">
   </head>
 
   <body>
@@ -47,11 +48,11 @@
                   <svg class="navigation-image basket-image" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/>
                   </svg>
-                  <button class="popover-close-button">
+                  Корзина</a>
+                  <button class="popover-close-button" type="button">
                     2
                     <span class="visually-hidden">Закрыть</span>
                   </button>
-                  Корзина</a>
                   <div class="popover popover-cart">
                     <div class="popover-content">
                        <h2 class="popover-title visually-hidden">Корзина</h2>
@@ -63,7 +64,7 @@
                               <p class="popover-cart-text">Любительская<br>селфи-палка</p>
                            </div>
                           </a>
-                          <button class="popover-cart-button-delete">
+                          <button class="popover-cart-button-delete" type="button">
                            <span class="visually-hidden">Удалить</span>
                           </button>
                         </li>
@@ -74,7 +75,7 @@
                               <p class="popover-cart-text">Профессиональная<br>селфи-палка</p>
                            </div>
                           </a>
-                          <button class="popover-cart-button-delete">
+                          <button class="popover-cart-button-delete" type="button">
                            <span class="visually-hidden">Удалить</span>
                           </button>
                         </li>
@@ -84,7 +85,7 @@
                          <p class="popover-price-results-total">Сумма:&nbsp;2000 ₽</p>
                        </div>
                        <div class="popover-cart-button-container">
-                         <button class="open-basket-button">Открыть корзину</button>
+                         <button class="open-basket-button" type="button">Открыть корзину</button>
                        </div>
                     </div>
                   </div>
@@ -133,10 +134,10 @@
        <div class="slider-container slider-1 slider-current">
          <div class="slider-button-container">
           <img class="slider-image" src="images/slider/slider-1.png" alt="Изображение квадрокоптера" width="560" height="560">
-          <button class="slider-button slider-next">
+          <button class="slider-button slider-next" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
           </button>
-          <button class="slider-button slider-prev">
+          <button class="slider-button slider-prev" type="button">
             <span class="visually-hidden">Следующий слайд</span>
           </button>
          </div>
@@ -180,7 +181,7 @@
        <div class="slider-container slider-2">
          <img class="slider-image" src="images/slider/slider-2.png" alt="Изображение фитнес-браслета" width="560" height="560">
           <div class="slider-container-text slider-2">
-           <strong class="slider-slogan">Худеем правильно!</strong>
+           <strong class="slider-slogan">Худеем<br>правильно!</strong>
            <p class="slider-text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
             <a class="slider-link" href="catalog.html/categories/fitness">Подробнее</a>
            <table class="slider-table">
@@ -198,10 +199,10 @@
        <div class="slider-container slider-3">
         <img class="slider-image" src="images/slider/slider-3.png" alt="Изображение селфи-палки" width="560" height="560">
          <div class="slider-container-text"> 
-          <strong class="slider-slogan">Делай селфи, как Бен Стиллер!</strong>
+          <strong class="slider-slogan">Делай селфи,<br>как Бен Стиллер!</strong>
            <p class="slider-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
             <a class="slider-link" href="catalog.html/categories/monopods">Подробнее</a>
-          <table class="slider-table">
+          <table class="slider-table-3">
             <tr class="slider-table-item">
              <th>8,5 м</th>
              <th>5 кг</th>
@@ -226,23 +227,23 @@
              <div class="image-container">
               <img class="categories-images" src="images/categories/virtual.svg" alt="Изображение для категории Вируальная реальность" width="97" height="55">
              </div>
-             <p>Виртуальная реальность</p>
+             <p class="categories-text">Виртуальная реальность</p>
            </a>
          </li>
          <li class="categories-item">
            <a class="categories-link" href="catalog.html">
-            <div class="image-container selfie">
+            <div class="image-container image-selfie">
              <img class="categories-images" src="images/categories/monopods.svg" alt="Изображение для категории Моноподы для селфи" width="86" height="117">
             </div>
-            <p>Моноподы для селфи</p>
+            <p class="categories-text">Моноподы<br>для селфи</p>
            </a>
          </li>
-         <li class="categories-item">
+         <li class="categories-item image-camera">
            <a class="categories-link" href="catalog.html/categories/e-cameras">
             <div class="image-container">
              <img class="categories-images" src="images/categories/action-camera.svg" alt="Изображение для категории Экшн-камеры" width="71" height="87">
             </div>
-            <p>Экшн-камеры</p>
+            <p class="categories-text">Экшн-камеры</p>
           </a>
          </li>
          <li class="categories-item">
@@ -250,7 +251,7 @@
             <div class="image-container">
              <img class="categories-images" src="images/categories/fitness-bracelets.svg" alt="Изображение для категории Фитнес-браслеты" width="107" height="65">
            </div>
-           <p>Фитнес-браслеты</p>
+           <p class="categories-text">Фитнес-браслеты</p>
           </a>
          </li>
          <li class="categories-item">
@@ -258,7 +259,7 @@
             <div class="image-container">
              <img class="categories-images" src="images/categories/smart-watch.svg" alt="Изображение для категории Умные часы" width="56" height="98">
             </div>
-            <p>Умные часы</p>
+            <p class="categories-text">Умные часы</p>
            </a>
          </li>
          <li class="categories-item">
@@ -266,7 +267,7 @@
             <div class="image-container">
              <img class="categories-images" src="images/categories/quadrocopters.svg" alt="Изображение для категории Квадрокоптеры" width="132" height="69">
             </div>
-            <p>Квадрокоптеры</p>
+            <p class="categories-text">Квадрокоптеры</p>
            </a>
          </li>
         </ul>
@@ -281,21 +282,21 @@
            <div class="container">
              <div class="advanvantages-content-container">
               <div class="advantages-button-container">
-                <button class="advantages-button advantages-button-current">
+                <button class="advantages-button advantages-button-current" type="button">
                   <span class="advantages-button-text">Доставка</span>
                 </button>
-                <button class="advantages-button">
+                <button class="advantages-button" type="button">
                   <span class="advantages-button-text">Гарантия</span>
                 </button>
-                <button class="advantages-button">
+                <button class="advantages-button" type="button">
                   <span class="advantages-button-text">Кредит</span>
                 </button>
               </div>
              <ul class="advantages-list">
               <li class="advantages-item-1 advantages-current">
                <h3 class="advantages-title">Доставка</h3>
-                <p class="advantages-text">Мы с удовольствием доставим ваш товар прямо
-                 к вашему подъезду совершенно бесплатно! Ведь
+                <p class="advantages-text">Мы с удовольствием доставим ваш товар прямо<br>
+                 к вашему подъезду совершенно бесплатно! Ведь<br>
                  мы неплохо заработаем, поднимая его на ваш этаж.
                 </p>
               </li>
@@ -338,10 +339,10 @@
            <div class="contacts-container-info">
             <h3 class="contacts-title">О нас</h3>
              <div class="info-text-container">
-               <p class="contacts-text">Огромный выбор гаджетов не оставит равнодушным гика, 
+               <p class="contacts-text-left">Огромный выбор гаджетов не оставит равнодушным гика, 
                который есть в каждом из нас.
                </p>
-               <p class="contacts-text">Мы можем доставить ваш товар в самые отдалённые уголки 
+               <p class="contacts-text-left">Мы можем доставить ваш товар в самые отдалённые уголки 
                России транспортными компаниями:
                </p>
               </div>
@@ -352,15 +353,15 @@
                 <li class="contacts-item">ТоксБерри</li>
                </ul>
              </div>
-             <a class="contacts-link contacts-button" href="about.html">Подробнее о нас</a>
+             <a class="contacts-link-delivery contacts-button" href="about.html">Подробнее о нас</a>
            </div>
 
            <!-- Контакты -->
            <div class="contacts-container-info">
             <h3 class="contacts-title">Контакты</h3>
              <div class="info-adress-container">
-                <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис.<br>
-                Заодно, сможете проверить работоспособность покупки.
+                <p class="contacts-text-right">Вы можете забрать товар сами, заехав в наш офис.<br>
+                Заодно сможете проверить работоспособность покупки.
                 </p>
                <h4 class="contacts-subtitle">Интернет-магазин «Девайс»</h4>
                 <address class="contacts-address">
@@ -425,7 +426,7 @@
             </li>
            </ul>
            <address class="footer-contacts-phone">
-            <a class="about-text-phone" href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
+            <a class="about-text-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
            </address>
          </div>
         
@@ -472,14 +473,14 @@
      <div class="modal modal-auth">
        <section class="modal-content">
         <h2 class="modal-title">Доставка под заказ</h2>
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="field-group field-login-item">
             <label class="modal-item" for="auth-login">Ваше имя:</label>
             <input class="auth-form-field field-login" type="text" id="auth-login" name="auth-login" placeholder="Имя Фамилия">
-            <span class="login-bottom-text">Пожалуйста представьтесь</span>
+            <span class="login-bottom-text login-invalid">Пожалуйста представьтесь</span>
           </p>
           <p class="field-group field-e-mail-item">
             <label class="modal-item" for="auth-e-mail">Ваш e-mail:</label>
@@ -492,7 +493,7 @@
           </p>
           <p class="field-group field-number-item">
             <label class="modal-item" for="auth-number">Количество:</label>
-            <input class="auth-form-field field-number" type="number" id="auth-range" name="auth-number" value="1" min="1" max="90000">
+            <input class="auth-form-field field-number" type="text" id="auth-number" name="auth-number" value="1">
             <button class="number-button-minus" type="button">
               <span class="visually-hidden">Левая кнопка</span>
             </button>

@@ -39,11 +39,17 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    min-width: 1440px;
     font-family: "Rubik", "Arial", sans-serif;
     font-size: 18px;
     line-height: 30px;
     color: #000000;
     background-color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .visually-hidden {
@@ -55,7 +61,7 @@ body {
     border: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
 .container {
     width: 1160px;
@@ -63,7 +69,7 @@ body {
 }
 
 /* Шапка сайта*/
-.page-header {  
+.page-header {
     color: #000000;
 }
 
@@ -104,7 +110,7 @@ body {
 .user-navigation-list {
     margin: 0;
     padding: 0;
-    height: 20px;
+    min-height: 20px;
     margin-bottom: 29px;
     display: flex;
     flex-wrap: wrap;
@@ -206,16 +212,16 @@ body {
     position: relative;
     z-index: 1;
     left: 9px;
-    padding-right: 8px;
-    top: -1px;
+    padding-right: 12px;
+    top: -2px;
 }
 
 .navigation-image-login {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 .navigation-image {
-    margin-right: 10px;
+    margin-right: 6px;
 }
 
 .user-navigation-item-search {
@@ -231,7 +237,7 @@ body {
 
 .user-navigation-search-input {
     display: block;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -280,7 +286,7 @@ body {
     content: "";
     top: -10px;
     left: 346px;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -312,8 +318,8 @@ body {
 .user-navigation-search-button:active {
     border: 2px solid #000000;
     background-color: #000000;
-    color: rgba(255, 255, 255, 0.3);;
-    border-radius: 0px 20px 20px 0px;
+    color: rgba(255, 255, 255, 0.3);
+    border-radius: 0 20px 20px 0;
 }
 
 .user-navigation-search-label {
@@ -334,7 +340,7 @@ body {
 }
 
 .link-logout {
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -351,7 +357,7 @@ body {
 .user-navigation-item-compare {
     width: 120px;
     height: 20px;
-    margin-right: 11px;
+    margin-right: 20px;
 }
 
 .user-navigation-item-basket {
@@ -363,10 +369,11 @@ body {
 
 /* Скроем для дальнейшей реализации */
 .popover {
+    display: none;
     position: absolute;
     content: "";
     top: 32px;
-    right: -74px;
+    right: -80px;
     box-sizing: border-box;
     z-index: 2;
     font-family: "Rubik", sans-serif;
@@ -374,8 +381,7 @@ body {
     font-size: 16px;
     line-height: 20px;
     background-color: #000000;
-    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
-    display: none;
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .popover-open {
@@ -395,8 +401,8 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 0;
-    left: -5px;
+    top: -1px;
+    left: -6px;
     border: none;
     z-index: 1;
 }
@@ -417,7 +423,7 @@ body {
     position: absolute;
     content: "";
     top: -6px;
-    left: 157px;
+    left: 151px;
     background-image: url(../images/basket-popup/triangle-popover.svg);
     background-repeat: no-repeat;
     z-index: 1;
@@ -483,14 +489,16 @@ body {
     background-image: url(../images/basket-popup/delete.svg);
     background-repeat: no-repeat;
     background-color: transparent;
+    background-position: center;
     border: none;
     border-radius: 50%;
     padding: 0;
     margin: 0;
-    width: 11px;
-    height: 11px;
+    width: 14px;
+    height: 14px;
     cursor: pointer;
     margin-left: auto;
+    margin-top: 5px;
 }
 
 .popover-cart-button-delete:focus-visible {
@@ -499,6 +507,7 @@ body {
 }
 
 .popover-cart-button-delete:hover {
+    outline: none;
     opacity: 0.6;
 }
 
@@ -571,7 +580,7 @@ body {
 .navigation-list {
     margin: 0;
     padding: 0;
-    width: 1040px;
+    width: 1045px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -599,7 +608,7 @@ body {
     position: absolute;
     content: "";
     width: 1100px;
-    height: 120px;
+    min-height: 120px;
     top: 50px;
     left: -60px;
     padding-left: 60px;
@@ -617,15 +626,20 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 18px;
-    margin-right: 50px;
+    min-width: 200px;
+    margin: 0;
+}
+
+.navigation-submenu-item:first-of-type {
     width: 210px;
+    margin-right: 29px;
 }
 
 .navigation-submenu-link {
     text-decoration: none;
     color: #000000;
     width: max-content;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
 }
 
 .navigation-submenu-link:focus-visible {
@@ -650,13 +664,13 @@ body {
 .navigation-item-delivery {
     width: 140px;
     height: 20px;
-    margin-right: 20px;
+    margin-right: 19px;
 }
 
 .navigation-item-garanty {
     width: 140px;
     height: 20px;
-    margin-right: 60px;
+    margin-right: 65px;
 }
 
 .navigation-item-contacts {
@@ -719,7 +733,6 @@ body {
     outline: none;
 }
 
-
 .navigation-catalog-link::before {
     content: "";
     position: absolute;
@@ -731,7 +744,7 @@ body {
     top: 0;
 }
 
-.navigation-catalog-link:hover:before {
+.navigation-catalog-link:hover::before {
     content: "";
     position: absolute;
     width: 50px;
@@ -794,7 +807,7 @@ body {
     position: absolute;
     background-image: url(../images/slider/slider-button-left.svg);
     background-repeat: no-repeat;
-    top: 230px;
+    top: 252px;
     left: 19px;
 }
 
@@ -804,7 +817,7 @@ body {
     border: 2px solid #af4fff;
     border-radius: 6px;
     background-position: center;
-    top: 220px;
+    top: 242px;
     left: 9px;
 }
 
@@ -813,7 +826,7 @@ body {
     position: absolute;
     background-image: url(../images/slider/slider-button-right.svg);
     background-repeat: no-repeat;
-    top: 230px;
+    top: 252px;
     right: 19px;
 }
 
@@ -823,7 +836,7 @@ body {
     border: 2px solid #af4fff;
     border-radius: 6px;
     background-position: center;
-    top: 220px;
+    top: 242px;
     right: 9px;
 }
 
@@ -849,7 +862,7 @@ body {
     height: 135px;
     top: 30px;
     right: 48px;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 800;
     font-size: 180px;
     line-height: 30px;
@@ -867,7 +880,7 @@ body {
     height: 135px;
     top: 30px;
     right: 48px;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 800;
     font-size: 180px;
     line-height: 30px;
@@ -885,7 +898,7 @@ body {
     height: 135px;
     top: 30px;
     right: 48px;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 800;
     font-size: 180px;
     line-height: 30px;
@@ -904,8 +917,8 @@ body {
 
 .slider-slogan {
     position: relative;
-    margin-top: 120px;
-    margin-bottom: 20px;
+    margin-top: 124px;
+    margin-bottom: 28px;
     font-family: "Raleway", sans-serif;
     font-size: 50px;
     line-height: 50px;
@@ -914,13 +927,13 @@ body {
 
 .slider-text {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 51px;
 }
 
 .slider-link {
     position: relative;
     width: 220px;
-    height: 20px;
+    min-height: 20px;
     margin-bottom: 70px;
     text-align: center;
     font-family: "Raleway", sans-serif;
@@ -972,26 +985,41 @@ body {
 }
 
 .slider-table th {
-    width: 160px;
+    min-width: 156px;
     font-weight: 400;
     padding: 0;
 }
 
+.slider-table-3 th {
+    width: 140px;
+    font-weight: 400;
+    padding: 0;
+    text-align: left;
+}
+
+.slider-table-3 th:first-of-type {
+    width: 140px;
+    font-weight: 400;
+    padding: 0;
+    padding-right: 15px;
+    text-align: left;
+}
+
 .slider-table-item {
-    font-size: 36px;
-    line-height: 30px;
+    font-size: 35px;
+    line-height: 24px;
 }
 
 .slider-table-text {
     font-size: 16px;
-    line-height: 30px;
+    line-height: 51px;
 }
 
 .slider-pagination {
     position: absolute;
     content: "";
-    top: 365px;
-    right: 61px;
+    top: 352px;
+    right: 49px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -999,11 +1027,11 @@ body {
     padding: 0;
     list-style-type: none;
 }
-  
+
 .slider-pagination-item {
     margin: 0 11px;
 }
-  
+
 .slider-pagination-button {
     width: 12px;
     height: 12px;
@@ -1058,15 +1086,16 @@ body {
 }
 
 .image-container {
-    width: 160px;
-    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    padding-top: 2px;
 }
 
-.selfie {
+.image-selfie {
     align-items: flex-end;
 }
 
@@ -1104,9 +1133,13 @@ body {
     opacity: 0.3;
 }
 
+.categories-text {
+    margin-top: 33px;
+}
+
 /* Список преимуществ */
 .advantages {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
 }
 
 .advantages-container {
@@ -1135,25 +1168,24 @@ body {
     display: flex;
     flex-direction: column;
     margin-right: 240px;
-    margin-top: 19px;
+    margin-top: 20px;
 }
 
 .advantages-button-container::before {
     position: absolute;
     content: "";
-    top: 70px;
-    left: 120px;
+    top: 68px;
+    left: 121px;
     transform: rotate(90deg);
     background-color: #000000;
     width: 319px;
     height: 7px;
-
 }
 
 /* Кнопки списка преимуществ */
 .advantages-button {
     position: relative;
-    font-family: "Raleway";
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 21px;
@@ -1161,7 +1193,7 @@ body {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     width: 160px;
-    height: 20px;
+    min-height: 20px;
     margin-bottom: 45px;
     border: none;
     outline: none;
@@ -1207,7 +1239,7 @@ body {
     background-color: #000000;
     height: 40px;
     width: 160px;
-    top:-8px;
+    top: -8px;
     z-index: -1;
 }
 
@@ -1215,7 +1247,7 @@ body {
     background-color: #000000;
     height: 40px;
     width: 160px;
-    top:-8px;
+    top: -8px;
     z-index: -1;
 }
 
@@ -1225,7 +1257,7 @@ body {
     background-color: #000000;
     height: 40px;
     width: 160px;
-    top:-8px;
+    top: -8px;
     z-index: -1;
 }
 
@@ -1255,8 +1287,8 @@ body {
     content: "";
     background-image: url(../images/advantage/delivery.svg);
     background-repeat: no-repeat;
-    top: 0;
-    left: 560px;
+    top: 17px;
+    left: 558px;
     width: 136px;
     height: 164px;
 }
@@ -1272,8 +1304,8 @@ body {
     content: "";
     background-image: url(../images/advantage/garanty.svg);
     background-repeat: no-repeat;
-    top: 0;
-    left: 560px;
+    top: -7px;
+    left: 545px;
     width: 171px;
     height: 195px;
 }
@@ -1288,8 +1320,8 @@ body {
     content: "";
     background-image: url(../images/advantage/credit.svg);
     background-repeat: no-repeat;
-    top: 0;
-    left: 560px;
+    top: -7px;
+    left: 533px;
     width: 156px;
     height: 188px;
 }
@@ -1297,17 +1329,17 @@ body {
 .advantages-title {
     font-family: "Raleway", sans-serif;
     font-size: 50px;
-    line-height: 50px;
+    line-height: 55px;
     width: 560px;
-    height: 70px;
+    min-height: 70px;
     margin: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
     padding: 0;
 }
 
 .advantages-text {
     width: 500px;
-    height: 165px;
+    min-height: 165px;
     margin: 0;
     padding: 0;
 }
@@ -1328,7 +1360,7 @@ body {
     justify-content: center;
     content: "";
     top: 29px;
-    right: 31px;
+    right: 33px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -1336,11 +1368,11 @@ body {
     cursor: pointer;
 }
 
-.delivery-button-container:hover:after {
+.delivery-button-container:hover::after {
     background-color: #dcdcdc;
 }
 
-.delivery-button-container:active:after {
+.delivery-button-container:active::after {
     background-color: #dcdcdc;
 }
 
@@ -1351,7 +1383,7 @@ body {
     background-repeat: no-repeat;
     background-position: 50%;
     top: 29px;
-    right: 31px;
+    right: 33px;
     width: 40px;
     height: 40px;
     opacity: 0.3;
@@ -1378,8 +1410,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1160px;
-    height: 100px;
+    min-height: 100px;
+    padding: 0 125px;
 }
 
 .delivery-link:focus-visible {
@@ -1462,9 +1494,9 @@ body {
     font-size: 50px;
     line-height: 50px;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 50px;
     width: 560px;
-    height: 70px;
+    min-height: 70px;
 }
 
 .info-text-container {
@@ -1475,6 +1507,16 @@ body {
     height: 200px;
     margin: 0;
     margin-bottom: 25px;
+}
+
+.contacts-text-left {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 15px;
+}
+
+.contacts-text-right {
+    margin-top: 25px;
 }
 
 .info-delivery-container {
@@ -1490,7 +1532,7 @@ body {
     line-height: 20px;
     list-style-type: none;
     margin: 0;
-    margin-left: 34px;
+    margin-left: 35px;
     padding: 0;
 }
 
@@ -1510,7 +1552,7 @@ body {
     border-radius: 50%;
 }
 
-.contacts-link {
+.contacts-link-delivery {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     line-height: 21px;
@@ -1527,13 +1569,13 @@ body {
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 28px;
     margin-bottom: 15px;
 }
 
 .contacts-schedule {
     list-style-type: none;
-    margin-bottom: 67px;
+    margin-bottom: 61px;
     padding: 0;
 }
 
@@ -1568,7 +1610,7 @@ body {
     position: relative;
     font-family: "Raleway", sans-serif;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 28px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
@@ -1587,7 +1629,7 @@ body {
     background-color: #ffe17f;
     width: 260px;
     height: 8px;
-    top: 6px;
+    top: 10px;
     left: 0;
     z-index: -1;
 }
@@ -1604,7 +1646,7 @@ body {
     background-color: #af4fff;
     width: 260px;
     height: 8px;
-    top: 6px;
+    top: 10px;
     left: 0;
     z-index: -1;
 }
@@ -1612,18 +1654,17 @@ body {
 .contacts-button:hover::before {
     background-color: #ffe17f;
     height: 40px;
-    top: -10px;
+    top: -8px;
 }
 
 /* Подписка на рассылку */
 .subscription {
     background-color: #f0f0f0;
-    height: 420px;
+    min-height: 420px;
 }
 
 .subscription-container {
     display: flex;
-    align-items: baseline;
 }
 
 .subscription-title {
@@ -1631,12 +1672,14 @@ body {
     font-size: 50px;
     line-height: 50px;
     width: 360px;
-    height: 120px;
-    margin-top: 75px;
+    min-height: 120px;
+    margin-top: 77px;
     margin-right: 240px;
+    margin-bottom: 40px;
 }
 
 .subscription-text {
+    margin-top: 87px;
     width: 560px;
 }
 
@@ -1668,7 +1711,7 @@ body {
     border-bottom: 3px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 9px;
     padding-top: 13px;
-    padding-right: 35px;
+    padding-right: 40px;
     cursor: pointer;
 }
 
@@ -1699,7 +1742,7 @@ body {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     width: 260px;
-    height: 55px;
+    min-height: 55px;
     border: 3px solid rgba(0, 0, 0, 0.1);
     padding: 0;
     margin-right: auto;
@@ -1738,14 +1781,14 @@ body {
     background-repeat: no-repeat;
     width: 14px;
     height: 14px;
-    top: 8px;
-    left: -29px;
+    top: 7px;
+    right: 150px;
 }
 
 /* Подвал */
 .page-footer {
     background-color: #444444;
-    color:#ffffff;
+    color: #ffffff;
 }
 
 .footer-container {
@@ -1758,9 +1801,8 @@ body {
 .footer-list-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     margin-bottom: 50px;
-    margin-top: 35px;
+    margin-top: 27px;
 }
 
 .footer-contacts-adress {
@@ -1786,9 +1828,9 @@ body {
 
 .footer-item {
     width: 150px;
-    height: 20px;
+    min-height: 20px;
     text-align: center;
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .footer-item:last-child {
@@ -1861,7 +1903,7 @@ body {
     display: grid;
     grid-template-columns: 280px auto 280px;
     align-items: center;
-    grid-template-areas: 
+    grid-template-areas:
        ". center right";
 }
 
@@ -1960,6 +2002,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    margin: auto;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.9);
@@ -1977,7 +2020,7 @@ body {
     background-color: #ffffff;
     border: 10px solid #000000;
     box-sizing: border-box;
-    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .modal-auth {
@@ -2047,7 +2090,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    color: #000000;
     background-color: #f0f0f0;
     color: rgba(0, 0, 0, 0.6);
     height: 60px;
@@ -2111,6 +2153,11 @@ body {
     height: 30px;
 }
 
+/* Добавил стили для смены цвета, если ошибка */
+.login-invalid {
+    color: #ff3d3d;
+}
+
 .field-e-mail-item {
     position: relative;
 }
@@ -2133,6 +2180,7 @@ body {
 }
 
 .field-number {
+    text-align: center;
     width: 60px;
     padding: 0 50px;
 }
@@ -2257,7 +2305,7 @@ body {
     right: 60px;
     width: 200px;
     background: #000000;
-    box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
     padding: 19px 17px 0 19px;
 }
 
@@ -2295,7 +2343,7 @@ body {
 }
 
 .inner-header {
-    margin-top: 40px;
+    margin-top: 37px;
     margin-bottom: 50px;
 }
 
@@ -2303,7 +2351,8 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: 50px;
     line-height: 50px;
-    margin-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 22px;
     margin-left: 60px;
     padding: 0;
 }
@@ -2429,15 +2478,15 @@ body {
     align-items: center;
 }
 
-.sorting-type-item { 
-    font-family: "Raleway";
+.sorting-type-item {
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     margin-left: 70px;
-    margin-right: 55px;
+    margin-right: 48px;
 }
 
 .selection-control {
@@ -2447,7 +2496,7 @@ body {
     line-height: 19px;
     background-color: #ebebeb;
     border: none;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 .selection-control:focus-visible {
@@ -2472,6 +2521,8 @@ body {
 .sorting-button-list {
     list-style-type: none;
     display: flex;
+    margin-top: 14px;
+    margin-bottom: 20px;
     margin-left: auto;
     padding: 0;
 }
@@ -2542,7 +2593,7 @@ body {
 .catalog-bottom-wraper {
     display: grid;
     grid-template-columns: 328px 832px;
-    grid-template-areas: 
+    grid-template-areas:
        "filter products";
 }
 
@@ -2551,6 +2602,7 @@ body {
     position: relative;
     grid-area: filter;
     background-color: #ebebeb;
+    padding-top: 83px;
     padding-left: 60px;
     display: flex;
     flex-direction: column;
@@ -2563,17 +2615,7 @@ body {
     top: 0;
     right: 328px;
     width: 100vw;
-    height: 100%;  
-}
-
-.catalog-filter {
-    margin-top: 70px;
-    margin-bottom: 51px;
-    margin-right: 70px;
-}
-
-.catalog-filter fieldset:last-child {
-    margin-bottom: 0;
+    height: 100%;
 }
 
 .catalog-filter-group {
@@ -2588,41 +2630,57 @@ body {
     margin-bottom: 50px;
 }
 
-.catalog-filter-group::before {
-    position: absolute;
-    content: "";
-    background-color: #000000;
-    width: 200px;
-    height: 2px;
-    top: -44px;
-    left: 0;
+.price-group {
+    margin-bottom: 48px;
+}
+
+.checkbox-group {
+    margin-bottom: 58px;
+}
+
+.radio-group {
+    margin-bottom: 51px;
 }
 
 .catalog-filter-title {
+    position: relative;
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 20px;
     font-weight: 700;
     font-style: normal;
     width: 200px;
-    height: 34px;
+    min-height: 34px;
     padding: 0;
     margin: 0;
+    margin-bottom: 14px;
+}
+
+.catalog-filter-title::before {
+    position: absolute;
+    content: "";
+    background-color: #000000;
+    width: 200px;
+    height: 2px;
+    top: -14px;
+    left: 0;
 }
 
 .range-scale {
     position: relative;
     height: 2px;
-    background-color: #dcdcdc;
     border-radius: 2px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 .range-bar {
     position: absolute;
     height: 2px;
     background-color: #000000;
+    left: 9px;
+    width: 109px;
 }
 
 .range-toggle {
@@ -2656,8 +2714,8 @@ body {
     top: -8px;
     left: -9px;
 }
-  
-  .toggle-max {
+
+.toggle-max {
     top: -8px;
     right: -9px;
 }
@@ -2665,9 +2723,9 @@ body {
 .range-wrapper-inputs {
     display: flex;
 }
-  
+
 .catalog-filter-label {
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 15px;
     line-height: 18px;
@@ -2677,7 +2735,7 @@ body {
     padding: 0;
     width: min-content;
 }
-  
+
 .range-input {
     width: 30px;
     padding: 0 2px;
@@ -2686,6 +2744,7 @@ body {
     border: none;
     appearance: textfield;
     margin-right: 40px;
+    min-width: 37px;
 }
 
 .range-input::selection {
@@ -2701,10 +2760,15 @@ body {
 .catalog-filter-list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 .catalog-filter-item {
-    margin-bottom: 15px;
+    margin-bottom: 21px;
+}
+
+.catalog-filter-item:last-child {
+    margin-bottom: 0;
 }
 
 /* Control */
@@ -2715,80 +2779,132 @@ body {
 }
 
 /* Mark */
+/* Состояние без отметки */
 .control-mark {
     position: absolute;
     top: 0;
     left: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #000000;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 .control-input-image {
     position: absolute;
     content: "";
-    top: 3px;
-    left: 3px;
+    top: 0;
+    left: 0;
+    padding: 3px;
     cursor: pointer;
     fill: #000000;
-}
-
-.control-input[type="checkbox"]:checked + .control-mark svg,
-.control-input[type="checkbox"]:checked + .control-mark {
-  fill: transparent;
-  border-color: rgba(0, 0, 0, 0.5);
-}
-
-.control-input:focus-visible ~ .control-label {
-    color: #af4fff;
-}
-
-.control-input:hover ~ .control-label {
-    color: #000000;
-}
-
-.control-input:active ~ .control-label {
-    opacity: 0.2;
+    display: none;
 }
 
 .control-input:focus-visible ~ .control-mark,
-.control-input:focus-visible ~ .control-mark svg {
-    fill: #af4fff;
+.control-input:focus-visible ~ .control-label {
+    color: #af4fff;
     border-color: #af4fff;
 }
 
 .control-input:hover ~ .control-mark,
-.control-input:hover ~ .control-mark svg {
-    fill: rgba(0, 0, 0, 0.5);
-    border-color: rgba(0, 0, 0, 0.5);
+.control-input:hover ~ .control-label {
+    color: #000000;
+    border-color: rgba(0, 0, 0, 0.2);
 }
 
 .control-input:active ~ .control-mark,
-.control-input:active ~ .control-mark svg {
+.control-input:active ~ .control-label {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+/* Состояние отмечен */
+.control-input[type="checkbox"]:checked + .control-mark svg,
+.control-input[type="checkbox"]:checked + .control-mark {
+    display: block;
+    border-color: #000000;
+}
+
+.control-input[type="checkbox"]:checked:focus-visible + .control-mark svg,
+.control-input[type="checkbox"]:checked:focus-visible + .control-mark {
+    display: block;
+    fill: #af4fff;
+    border-color: #af4fff;
+}
+
+.control-input[type="checkbox"]:checked:hover + .control-mark svg,
+.control-input[type="checkbox"]:checked:hover + .control-mark,
+.control-input[type="checkbox"]:checked:hover ~ .control-label {
+    display: block;
+    fill: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.control-input[type="checkbox"]:checked:active + .control-mark svg,
+.control-input[type="checkbox"]:checked:active + .control-mark,
+.control-input[type="checkbox"]:checked:active ~ .control-label {
+    display: block;
     fill: rgba(0, 0, 0, 0.2);
-    opacity: 0.2;
+    border-color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.2);
 }
 
 /* Radio */
+
 .control-input[type="radio"] + .control-mark {
     border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Состояние c отметкой */
+.control-input[type="radio"]:checked + .control-mark {
+    border-color: #000000;
 }
 
 .control-input[type="radio"]:checked + .control-mark::before {
     position: absolute;
+    content: "";
     top: 4px;
     left: 4px;
     width: 8px;
     height: 8px;
     background-color: #000000;
     border-radius: 50%;
-    content: "";
 }
 
-.control-input[type="radio"]:focus-visible + .control-mark::before {
+.control-input[type="radio"]:checked:focus-visible + .control-mark {
+    border-color: #af4fff;
+}
+
+.control-input[type="radio"]:checked:focus-visible + .control-mark::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
     background-color: #af4fff;
+    border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked:hover + .control-mark,
+.control-input[type="radio"]:hover ~ .control-label {
+    border-color: rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+}
+
+.control-input[type="radio"]:checked:hover + .control-mark::before {
+    position: absolute;
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
 }
 
 /* Кнопка фильтра */
@@ -2802,7 +2918,7 @@ body {
     text-decoration: none;
     color: #000000;
     width: 200px;
-    height: 20px;
+    min-height: 20px;
     border: none;
     padding: 0;
     z-index: 1;
@@ -2859,13 +2975,13 @@ body {
 .product-list {
     list-style-type: none;
     margin: 0;
-    margin-top: 70px;
-    margin-left: 70px;
+    margin-top: 69px;
+    margin-left: 72px;
     margin-bottom: 44px;
     padding: 0;
     display: grid;
     grid-template-columns: 360px 360px;
-    gap: 40px 44px;
+    gap: 44px 40px;
 }
 
 .product-card {
@@ -2888,7 +3004,7 @@ body {
     display: block;
 }
 
-.product-card-link:focus-visible  {
+.product-card-link:focus-visible {
     outline: 5px solid #af4fff;
     color: #af4fff;
 }
@@ -2904,7 +3020,6 @@ body {
 .product-text-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 32px;
 }
 
 .product-card-title {
@@ -2916,6 +3031,7 @@ body {
     width: 280px;
     height: 50px;
     margin: 0;
+    margin-top: 25px;
 }
 
 .product-card-price {
@@ -2923,6 +3039,7 @@ body {
     font-size: 18px;
     line-height: 21px;
     margin: 0;
+    margin-top: 28px;
     font-family: "Rubik", sans-serif;
 }
 
@@ -2958,7 +3075,7 @@ body {
     z-index: -1;
 }
 
-.product-card-button:hover:before {
+.product-card-button:hover::before {
     height: 40px;
     top: -12px;
 }
@@ -2985,10 +3102,10 @@ body {
     align-items: center;
     justify-content: center;
     letter-spacing: 0.2em;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     width: 760px;
     height: 55px;
-    margin-left: 70px;
+    margin-left: 72px;
     margin-bottom: 51px;
     padding: 0;
     background-color: #ffffff;
@@ -3016,9 +3133,9 @@ body {
     justify-content: center;
     align-items: center;
     width: 760px;
-    height: 70px;
+    min-height: 70px;
     margin: 0;
-    margin-left: 70px;
+    margin-left: 72px;
     list-style-type: none;
     padding: 0;
 }
@@ -3030,11 +3147,11 @@ body {
 .pagination-item-number {
     position: relative;
     text-decoration: none;
-    font-family: "Rubik";
+    font-family: "Rubik", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color:rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination-link {
@@ -3066,19 +3183,19 @@ body {
 .pagination-button-link {
     display: flex;
     align-items: center;
-    height: 70px;
+    min-height: 70px;
     text-decoration: none;
     color: #000000;
 }
 
 .pagination-left-button-link {
-    padding-left: 24px;
+    padding-left: 29px;
     padding-right: 18px;
 }
 
 .pagination-right-button-link {
-    padding-left: 18px;
-    padding-right: 24px;
+    padding-left: 20px;
+    padding-right: 27px;
 }
 
 .pagination-button-link:focus-visible {
@@ -3098,7 +3215,7 @@ body {
 
 .pagination-left-item {
     text-decoration: none;
-    margin-right: auto;
+    margin-right: 184px;
 }
 
 .pagination-right-item {

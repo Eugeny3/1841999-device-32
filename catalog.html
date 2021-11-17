@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="../1841999-device-32/images/favicon.svg">
   </head>
 
   <body>
@@ -48,11 +49,11 @@
                 <svg class="navigation-image basket-image" aria-hidden="true" focusable="false" width="16" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" fill="#000"/>
                 </svg>
-                <button class="popover-close-button">
+                Корзина</a>
+                <button class="popover-close-button" type="button">
                   2
                   <span class="visually-hidden">Закрыть</span>
                 </button>
-                Корзина</a>
                 <div class="popover popover-cart">
                   <div class="popover-content">
                      <h2 class="popover-title visually-hidden">Корзина</h2>
@@ -64,7 +65,7 @@
                             <p class="popover-cart-text">Любительская<br>селфи-палка</p>
                          </div>
                         </a>
-                        <button class="popover-cart-button-delete">
+                        <button class="popover-cart-button-delete" type="button">
                          <span class="visually-hidden">Удалить</span>
                         </button>
                       </li>
@@ -75,7 +76,7 @@
                             <p class="popover-cart-text">Профессиональная<br>селфи-палка</p>
                          </div>
                         </a>
-                        <button class="popover-cart-button-delete">
+                        <button class="popover-cart-button-delete" type="button">
                          <span class="visually-hidden">Удалить</span>
                         </button>
                       </li>
@@ -85,7 +86,7 @@
                        <p class="popover-price-results-total">Сумма:&nbsp;2000 ₽</p>
                      </div>
                      <div class="popover-cart-button-container">
-                       <button class="open-basket-button">Открыть корзину</button>
+                       <button class="open-basket-button" type="button">Открыть корзину</button>
                      </div>
                   </div>
                 </div>
@@ -161,12 +162,12 @@
             </form>
              <ul class="sorting-button-list">
                <li class="sorting-button-item">
-                <button class="sorting-button left-button">
+                <button class="sorting-button left-button" type="button">
                   <span class="visually-hidden">Левая кнопка</span>
                 </button>
                </li>
                <li class="sorting-button-item">
-                <button class="sorting-button right-button current-button">
+                <button class="sorting-button right-button current-button" type="button">
                   <span class="visually-hidden">Правая кнопка</span>
                 </button>
               </li>
@@ -178,15 +179,15 @@
         <div class="catalog-bottom-wraper container">
          <div class="filter-container">
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-            <fieldset class="catalog-filter-group">
+            <fieldset class="catalog-filter-group price-group">
               <legend class="catalog-filter-title">Стоимость</legend>
               <div class="range">
                 <div class="range-scale">
-                  <div class="range-bar" style="left: 9px; width: 119px">
-                    <button class="range-toggle toggle-min">
+                  <div class="range-bar">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену.</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену.</span>
                     </button>
                   </div>
@@ -197,13 +198,13 @@
                     от <input class="range-input" type="number" value="0" name="min-price">
                   </label>
                   <label class="catalog-filter-label">
-                    до <input class="range-input" type="number" value="5000" name="max-price" style="width: 37px">
+                    до <input class="range-input" type="number" value="5000" name="max-price">
                   </label>
                 </div>
               </div>
             </fieldset>
 
-              <fieldset class="catalog-filter-group">
+              <fieldset class="catalog-filter-group checkbox-group">
                     <legend class="catalog-filter-title">Цвет</legend>
                 <ul class="catalog-filter-list">
                  <li class="catalog-filter-item">
@@ -217,7 +218,7 @@
                     <span class="control-label">Черный</span>
                   </label> 
                  </li>
-                 <li class="catalog-filter-item"> 
+                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="visually-hidden control-input" type="checkbox" name="white" checked>
                     <span class="control-mark">
@@ -264,7 +265,7 @@
                 </ul>  
               </fieldset>
                 
-                <fieldset class="catalog-filter-group">
+                <fieldset class="catalog-filter-group radio-group">
                     <legend class="catalog-filter-title">Bluetooth</legend>
                     <ul class="catalog-filter-list">
                      <li class="catalog-filter-item">
@@ -305,8 +306,8 @@
                  <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/product-2.jpg" alt="Профессиональная селфи-палка" width="360" height="380">
                     <div class="product-text-container">
-                      <h3 class="product-card-title">Профессиональная селфи-палка</h3>
-                      <p class="product-card-price">1500 ₽</p>
+                      <h3 class="product-card-title">Профессиональная<br>селфи-палка</h3>
+                      <p class="product-card-price">1 500 ₽</p>
                     </div>
                  </a>
                  <a class="product-card-button" href="#">Подробнее</a>
@@ -315,8 +316,8 @@
                  <a class="product-card-link" href="#">
                     <img class="product-card-image" src="images/catalog/product-3.jpg" alt="Непотопляемая селфи-палка" width="360" height="380">
                     <div class="product-text-container">  
-                      <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
-                      <p class="product-card-price">2500 ₽</p>
+                      <h3 class="product-card-title">Непотопляемая<br>селфи-палка</h3>
+                      <p class="product-card-price">2 500 ₽</p>
                     </div>
                  </a>
                  <a class="product-card-button" href="#">Подробнее</a>
@@ -326,7 +327,7 @@
                     <img class="product-card-image" src="images/catalog/product-4.jpg" alt="Селфи-палка Следуй за мной" width="360" height="380">
                     <div class="product-text-container">
                       <h3 class="product-card-title">Селфи-палка «Следуй за мной»</h3>
-                      <p class="product-card-price">4900 ₽</p>
+                      <p class="product-card-price">4 900 ₽</p>
                     </div>
                     <span class="new-mark">
                       <svg aria-hidden="true" focusable="false" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -445,7 +446,7 @@
     <div class="modal modal-auth">
       <section class="modal-content">
        <h2 class="modal-title">Доставка под заказ</h2>
-       <button class="modal-close-button">
+       <button class="modal-close-button" type="button">
          <span class="visually-hidden">Закрыть</span>
        </button>
        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -465,7 +466,7 @@
          </p>
          <p class="field-group field-number-item">
            <label class="modal-item" for="auth-number">Количество:</label>
-           <input class="auth-form-field field-number" type="number" id="auth-range" name="auth-number" value="1" min="1" max="90000">
+           <input class="auth-form-field field-number" type="number" id="auth-number" name="auth-number" value="1" min="1" max="90000">
            <button class="number-button-minus" type="button">
              <span class="visually-hidden">Левая кнопка</span>
            </button>
